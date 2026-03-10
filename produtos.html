@@ -4,21 +4,140 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Catálogo de Produtos</title>
-        <link rel="stylesheet" href="assets/css/style.css">
+        <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            nav .container {
+                display: flex;
+                flex-wrap: wrap;
+                background-color: rgb(170, 0, 0);
+                align-items: center;
+                justify-items: center;
+                justify-content: right;
+                color: white;
+                height: 150px;
+                width: auto;   
+            }
+
+            section {
+                justify-content: center;
+                display: flex;
+                gap: 50px
+            }
+            button {
+                cursor: pointer;
+                background-color: rgb(170, 0, 0);
+                padding: 8px 15px;
+                border: none;
+                transition: 0.3s;
+                border-radius: 15px;
+                color: white;
+            }
+            
+            .card_actions button {
+                width: 170px;
+            }
+            .card_actions {
+                display: flex;
+                justify-content: center;
+            }
+            button:hover {
+                box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+                background-color: rgb(200, 0, 0);
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        </style>
     </head>
 
     <body>
         
-        <nav>
+        <nav aria-label="barra de navegação principal">
             <div class="container">
                 <ul>
-                    <a href="index.html">Home</a>
+                    <button><a href="index.html">Home</a></button>
                 </ul>
                 <ul>
-                    <a href="produtos.html">Produtos</a>
+                    <button><a href="produtos.html">Produtos</a></button>
                 </ul>
-            </div>
+            </div>  
         </nav>
+        
+        <section>
+
+            <article class="card">
+                <div class="card_image_wrapper">
+                    <img src="assets/img/Produto1.jfif" alt="Descrição do Produto" class="card_image" loading="lazy">
+                </div>
+
+                <div class="card_content">
+                    <header class="card_header">
+                        <h2 class="card_title">Teclado mecânico gamer</h2>
+                        <p class="card_category">Teclados</p>
+                    </header>
+
+                    <p class="card_description">Teclado mecânico gamer switch brown retroiluminação azul Philco</p>
+                </div>
+
+                <div class="card_footer">
+                    <span class="card_price">R$ 130</span>
+                    <div class="card_actions">
+                        <button class="card_button" aria-label="Adicionar ao carrinho" onclick=comprarProduto(1)>Comprar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="assets/img/Produto2.jfif" alt="Descrição do Produto" class="card_image" loading="lazy">
+
+                <header>
+                    <h2>Mouse Gamer</h2>
+                    <p>Mouses</p>
+                </header>
+
+                <p>Mouse gamer Logitech G DPI 20000 7 botões configuráveis</p>
+
+                <div class="card_footer">
+                    <span class="card_price">R$ 150</span>
+                    <div class="card_actions">
+                        <button class="card_button" aria-label="Adicionar ao carrinho" onclick="comprarProduto(2)">Comprar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <div class="card">
+                    <img src="assets/img/Produto3.jfif" alt="Descrição do Produto" class="card_image" loading="lazy">
+                </div>
+
+                <header>
+                    <h2>Monitor 24" Odissey Samsung CRG50 144Hz</h2>
+                    <p>Monitores</p>
+                </header>
+
+                <p>Monitor curvo Samsung 144Hz 24 polegadas HDMI Free-Sync Full HD</p>
+
+                <div class="card_footer">
+                    <span class="card_price">R$ 1.500</span>
+                    <div class="card_actions">
+                        <button class="card_button" aria-label="Adicionar ao Carrinho" onclick="comprarProduto(3)">Comprar</button>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <script>
+            function comprarProduto(id) {
+                alert("Produto adicionado com sucesso!")
+            }
+        </script>
 
     </body>
 </html>
