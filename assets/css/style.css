@@ -20,10 +20,24 @@ nav .container {
     justify-items: center;
     justify-content: right;
     color: white;
-    height: 150px;
-    width: auto;   
+    height: 140px;
+    width: auto;
+    gap: 50px;
 }
 
+section.produtos {
+    justify-content: center;
+    display: flex;
+    gap: 50px
+}
+
+.card_actions button {
+    width: 170px;
+}
+.card_actions {
+    display: flex;
+    justify-content: center;
+}
 
 #presentation {
     display: flex;
@@ -62,4 +76,22 @@ button {
 button:hover {
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     background-color: rgb(200, 0, 0);
+}
+
+section.contatos button{
+    border-radius: 30px;
+    width: 130px;
+    height: 130px;
+}
+
+#espaçamento-rodapé {
+    height: 50px;
+}
+
+section.container {
+    gap: 50px;
+}
+
+#espaçamento-rodapé-produtos {
+    height: 323px;
 }
