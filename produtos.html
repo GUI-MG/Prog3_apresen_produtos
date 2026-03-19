@@ -15,7 +15,7 @@
                     <button><a href="index.html">Home</a></button>
                 </ul>
                 <ul>
-                    <button><a href="produtos.html">Produtos</a></button>
+                    <button><a href="carrinho.html">Carrinho</a></button>
                 </ul>
             </div>  
         </nav>
@@ -37,7 +37,7 @@
                 </div>
 
                 <div class="card_footer">
-                    <span class="card_price">R$ 130</span>
+                    <script src="functions.js" defer></script>
                     <div class="card_actions">
                         <button class="card_button" aria-label="Adicionar ao carrinho" onclick=adicionarAoCarrinho(1)>Adicionar ao Carrinho</button>
                         <button class="card_button" aria-label="Comprar Produto" onclick="comprar()">Comprar</button>
@@ -54,11 +54,11 @@
                         <p>Mouses</p>
                     </header>
                 </div>
-
+                
                 <p>Mouse gamer Logitech G DPI 20000 7 botões configuráveis</p>
-
+                
                 <div class="card_footer">
-                    <span class="card_price">R$ 150</span>
+                    <script src="functions.js" defer></script>
                     <div class="card_actions">
                         <button class="card_button" aria-label="Adicionar ao carrinho" onclick="adicionarAoCarrinho(2)">Adicionar ao Carrinho</button>
                         <button class="card_button" aria-label="Comprar Produto" onclick="comprar()">Comprar</button>
@@ -81,12 +81,36 @@
                 <p>Monitor curvo Samsung 144Hz 24 polegadas HDMI Free-Sync Full HD</p>
                                 
                 <div class="card_footer">
-                    <span class="card_price">R$ 3.250</span>
+                    <script src="functions.js" defer></script>
                     <div class="card_actions">
                         <button class="card_button" aria-label="Adicionar ao Carrinho" onclick=adicionarAoCarrinho(3)>Adicionar ao Carrinho</button>
-                        <button class="card_button" aria-label="Comprar Produto" onclick="comprar()">Comprar</button>
+                        <button class="card_button" aria-label="Comprar Produto" onclick="comprar(3)">Comprar</button>
                     </div>
                 </div>
+            </article>
+            
+            <article>
+                <div class="card">
+                    <img src="assets/img/Produto4.webp" alt="Descrição do Produto" class="card-image" loading="lazy">
+                </div>
+                
+                <div class="card_content" data-produto-id="4">
+                    <header>
+                        <h2>Gabinete Aquário ATX e Mini-ATX Preto</h2>
+                        <p>Gabinetes</p>
+                    </header>
+                </div>
+                
+                <p>Gabinete Aquário Mancer Preto</p>
+
+                <div class="card_footer">
+                    <script src="functions.js" defer></script>
+                    <div class="card_actions">
+                        <button class="card_button" aria-label="Adicionar ao Carrinho" onclick=adicionarAoCarrinho(4)>Adicionar ao Carrinho</button>
+                        <button class="card_button" aria-label="Comprar Produto" onclick=comprar(4)>Comprar</button>
+                    </div>
+                </div>
+
             </article>
 
         </section>
@@ -98,14 +122,6 @@
             </div>
         </footer>
 
-        <script>
-            function adicionarAoCarrinho(id) {
-                confirm("Adicionado com sucesso ao carrinho!");
-            }
-
-            function comprar() {
-                confirm("Desejas realizar a compra?");
-            }
-        </script>
+        <script src="functions.js"></script>
     </body>
 </html>
