@@ -11,7 +11,7 @@ ul {
 
 nav .container {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     background-color: rgb(170, 0, 0);
     align-items: center;
     justify-items: center;
@@ -31,6 +31,7 @@ section.produtos {
 .card_actions button {
     width: 170px;
 }
+
 .card_actions {
     display: flex;
     justify-content: center;

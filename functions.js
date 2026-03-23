@@ -37,7 +37,7 @@ let produtos = {
 }
 
 
-function precoProdutos(id){
+/* function precoProdutos(id){
     const divCardFooter = document.getElementById('card_footer');
     let html = '<p>Preço:</p>';
 
@@ -51,7 +51,7 @@ function precoProdutos(id){
 
 window.onload = function() {
     precoProdutos();
-}
+} */
 
 function comprar(id) {
     var confirmarCompra = confirm("Desejas comprar mesmo?");
@@ -67,10 +67,10 @@ let carrinho = [];
 function adicionarAoCarrinho(id) {
     var confirmar = confirm("Desejas adicionar esse produto ao carrinho?");
     if(confirmar) {
+        alert("Produto adicionado ao carrinho!");
         var idProduto = document.getElementById(data-produto-id);
         carrinho.push(produtos[idProduto]);
-        alert("Produto adicionado ao carrinho!");
-        return 0;
+        return 1;
     }else {
         alert("Produto não foi adicionado ao carrinho!");
         return 0;
