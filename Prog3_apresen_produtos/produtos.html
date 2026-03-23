@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Catálogo de Produtos</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+
+    <body>
+        
+        <nav aria-label="barra de navegação principal">
+            <div class="container">
+                <ul>
+                    <button><a href="index.html">Home</a></button>
+                </ul>
+                <ul>
+                    <button><a href="carrinho.html">Carrinho</a></button>
+                </ul>
+            </div>  
+        </nav>
+        
+        <section class="produtos">
+
+            <article class="card">
+                <div class="card_image_wrapper">
+                    <img src="assets/img/Produto1.jfif" alt="Descrição do Produto" class="card_image" loading="lazy">
+                </div>
+
+                <div class="card_content" data-produto-id="1">
+                    <header class="card_header">
+                        <h2 class="card_title">Teclado mecânico gamer</h2>
+                        <p class="card_category">Teclados</p>
+                    </header>
+
+                    <p class="card_description">Teclado mecânico gamer switch brown retroiluminação azul Philco</p>
+                </div>
+
+                <div class="card_footer">
+                    <script src="functions.js" defer></script>
+                    <div class="card_actions">
+                        <button class="card_button" aria-label="Adicionar ao carrinho" onclick=adicionarAoCarrinho(1)>Adicionar ao Carrinho</button>
+                        <button class="card_button" aria-label="Comprar Produto" onclick="comprar()">Comprar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="assets/img/Produto2.jfif" alt="Descrição do Produto" class="card_image" loading="lazy">
+
+                <div class="card_content" data-produto-id="2">
+                    <header>
+                        <h2>Mouse Gamer</h2>
+                        <p>Mouses</p>
+                    </header>
+                </div>
+                
+                <p>Mouse gamer Logitech G DPI 20000 7 botões configuráveis</p>
+                
+                <div class="card_footer">
+                    <script src="functions.js" defer></script>
+                    <div class="card_actions">
+                        <button class="card_button" aria-label="Adicionar ao carrinho" onclick="adicionarAoCarrinho(2)">Adicionar ao Carrinho</button>
+                        <button class="card_button" aria-label="Comprar Produto" onclick="comprar()">Comprar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <div class="card">
+                    <img src="assets/img/Produto3.jfif" alt="Descrição do Produto" class="card_image" loading="lazy">
+                </div>
+                
+                <div class="card_content" data-produto-id="3">
+                    <header>
+                        <h2>Monitor 24" Odissey Samsung CRG50 144Hz</h2>
+                        <p>Monitores</p>
+                    </header>
+                </div>
+                
+                <p>Monitor curvo Samsung 144Hz 24 polegadas HDMI Free-Sync Full HD</p>
+                                
+                <div class="card_footer">
+                    <script src="functions.js" defer></script>
+                    <div class="card_actions">
+                        <button class="card_button" aria-label="Adicionar ao Carrinho" onclick=adicionarAoCarrinho(3)>Adicionar ao Carrinho</button>
+                        <button class="card_button" aria-label="Comprar Produto" onclick="comprar(3)">Comprar</button>
+                    </div>
+                </div>
+            </article>
+            
+            <article>
+                <div class="card">
+                    <img src="assets/img/Produto4.webp" alt="Descrição do Produto" class="card-image" loading="lazy">
+                </div>
+                
+                <div class="card_content" data-produto-id="4">
+                    <header>
+                        <h2>Gabinete Aquário ATX e Mini-ATX Preto</h2>
+                        <p>Gabinetes</p>
+                    </header>
+                </div>
+                
+                <p>Gabinete Aquário Mancer Preto</p>
+
+                <div class="card_footer">
+                    <script src="functions.js" defer></script>
+                    <div class="card_actions">
+                        <button class="card_button" aria-label="Adicionar ao Carrinho" onclick=adicionarAoCarrinho(4)>Adicionar ao Carrinho</button>
+                        <button class="card_button" aria-label="Comprar Produto" onclick=comprar(4)>Comprar</button>
+                    </div>
+                </div>
+
+            </article>
+
+        </section>
+        
+        <div id="espaçamento-rodapé-produtos" class="container"></div>
+        <footer id="rodape">
+            <div class="container">
+                <small> &copy Gaston</small>
+            </div>
+        </footer>
+
+        <script src="functions.js"></script>
+    </body>
+</html>
