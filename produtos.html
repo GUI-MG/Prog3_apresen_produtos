@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
 
-    <body>
+    <body onload="precoProdutos()">
         
         <nav aria-label="barra de navegação principal">
             <div class="container">
@@ -22,7 +22,7 @@
         
         <section class="produtos">
 
-            <article class="card">
+            <article class="produto">
                 <div class="card_image_wrapper">
                     <img src="assets/img/Produto1.jfif" alt="Teclado Mecânico Philco" class="card_image" loading="lazy">
                 </div>
@@ -36,18 +36,20 @@
                     <p class="card_description">Teclado mecânico gamer switch brown retroiluminação azul Philco</p>
                 </div>
 
-                <div class="card_footer">
-                    <script src="functions.js" defer></script>
+                <div class="card_footer" id="card_footer">
+                    <span class="card_price" id="price"></span>
                     <div class="card_actions">
                         <button class="card_button" aria-label="Adicionar ao carrinho" onclick=adicionarAoCarrinho(1)>Adicionar ao Carrinho</button>
                         <button class="card_button" aria-label="Comprar Produto" onclick="comprar()">Comprar</button>
                     </div>
                 </div>
             </article>
-
-            <article class="card">
-                <img src="assets/img/Produto2.jfif" alt="Mouse Gamer Logitech G" class="card_image" loading="lazy">
-
+            
+            <article class="produto">
+                <div class="card_image_wrapper">
+                    <img src="assets/img/Produto2.jfif" alt="Mouse Gamer Logitech G" class="card_image" loading="lazy">
+                </div>
+                
                 <div class="card_content" data-produto-id="2">
                     <header>
                         <h2>Mouse Gamer</h2>
@@ -56,18 +58,18 @@
                 </div>
                 
                 <p>Mouse gamer Logitech G DPI 20000 7 botões configuráveis</p>
-                
-                <div class="card_footer">
-                    <script src="functions.js" defer></script>
+            
+                <div class="card_footer" id="card_footer">
+                    <span class="card_price" id="price"></span>
                     <div class="card_actions">
                         <button class="card_button" aria-label="Adicionar ao carrinho" onclick="adicionarAoCarrinho(2)">Adicionar ao Carrinho</button>
                         <button class="card_button" aria-label="Comprar Produto" onclick="comprar()">Comprar</button>
                     </div>
                 </div>
             </article>
-
-            <article>
-                <div class="card">
+            
+            <article class="produto">
+                <div class="card_image_wrapper">
                     <img src="assets/img/Produto3.jfif" alt="Monitor Samsung Odissey" class="card_image" loading="lazy">
                 </div>
                 
@@ -79,18 +81,19 @@
                 </div>
                 
                 <p>Monitor curvo Samsung 144Hz 24 polegadas HDMI Free-Sync Full HD</p>
-                                
-                <div class="card_footer">
-                    <script src="functions.js" defer></script>
+                
+                <div class="card_footer" id="card_footer">
+                    <span class="card_price" id="price"></span>
                     <div class="card_actions">
                         <button class="card_button" aria-label="Adicionar ao Carrinho" onclick=adicionarAoCarrinho(3)>Adicionar ao Carrinho</button>
                         <button class="card_button" aria-label="Comprar Produto" onclick="comprar(3)">Comprar</button>
                     </div>
                 </div>
+                </div>
             </article>
             
-            <article>
-                <div class="card">
+            <article class="produto">
+                <div class="card_image_wrapper">
                     <img src="assets/img/Produto4.webp" alt="Gabinete Aquário Mancer" class="card-image" loading="lazy">
                 </div>
                 
@@ -102,15 +105,15 @@
                 </div>
                 
                 <p>Gabinete Aquário Mancer Preto</p>
-
-                <div class="card_footer">
-                    <script src="functions.js" defer></script>
+                
+                <div class="card_footer" id="card_footer">
+                    <span class="card_price" id="price"></span>
                     <div class="card_actions">
                         <button class="card_button" aria-label="Adicionar ao Carrinho" onclick=adicionarAoCarrinho(4)>Adicionar ao Carrinho</button>
                         <button class="card_button" aria-label="Comprar Produto" onclick=comprar(4)>Comprar</button>
                     </div>
                 </div>
-
+                </div>
             </article>
 
         </section>

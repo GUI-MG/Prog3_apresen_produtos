@@ -37,27 +37,38 @@ let produtos = {
 }
 
 
-/* function precoProdutos(id){
-    const divCardFooter = document.getElementById('card_footer');
-    let html = '<p>Preço:</p>';
+function precoProdutos(){
+    const produtosPagina = document.querySelectorAll('.produto');
+    
+    produtosPagina.forEach(produto => {
+        const id = parseInt(produto.getAttribute('data-produto-id'));
+        
+        if(produtos[id]) {
+            const spanPreco = document.getElementById("price");
+            const precoFormatado = formatarPreco(produtos[id].preco);
+            
+            spanPreco.textContent = precoFormatado;
+        }else {
+            const spanPreco = document.getElementById("price");
+            spanPreco.textContent = 'Indisponível';
+            spanPreco.style.color = '#e74c3c';
+        }
 
-    for(let id in produtos) {
-        html += `<span class="card_price"> R$ ${produtos[id].preco.toFixed(2)}</span>`;
-    }
-
-    divCardFooter.innerHTML = html;
-
+    })
 }
 
-window.onload = function() {
-    precoProdutos();
-} */
+function formatarPreco(valor){
+    return valor.toLocaleString('pt-br', {
+        style: 'currency',
+        currency: 'BRL'
+    });
+}
 
 function comprar(id) {
     var confirmarCompra = confirm("Desejas comprar mesmo?");
     if(confirmarCompra) {
         document.getElementById(comprar);
-        return 0;
+        return 1;
     }
 }
 
